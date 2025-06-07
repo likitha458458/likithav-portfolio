@@ -1,83 +1,91 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
-import profileImage from '../assets/profile.jpeg';
-import techImage from '../assets/tech-bg.jpg';
-import techImage1 from '../assets/bgabout.png';
-
-
+import profileImage from '../assets/img3.jpeg';
+import bgImage from '../assets/bgabout.png';
 
 const Home = () => {
   return (
     <section
-      className="min-h-screen w-full bg-cover bg-center relative flex items-center justify-center font-sans"
-      style={{ backgroundImage: `url(${techImage1})` }}
+      className="min-h-screen w-full bg-cover bg-center relative flex items-center justify-center"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0D1117]/95 via-[#161B22]/85 to-[#0D1117]/95 z-0" />
+      <div className="absolute inset-0 bg-[#0D1117]/90 backdrop-blur-sm" />
 
-      {/* Content */}
-      <div className="relative z-10 text-[#8B949E] text-center px-4 max-w-5xl w-full space-y-6">
-        {/* Greeting */}
-        <h1 className="text-5xl font-extrabold tracking-tight flex justify-center items-center gap-2 text-white">
-          <span className="inline-block animate-wave origin-[70%_70%]">👋</span>
-          Hello, I’m <span className="text-[#58A6FF]">Likitha Vinjam</span>
-        </h1>
+      <div className="relative z-10 px-6 py-12 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        {/* Left Side Text */}
+        <div className="md:w-1/2 text-[#C9D1D9] space-y-6 text-center md:text-left">
+          <h1 className="text-3xl md:text-5xl font-bold text-white whitespace-nowrap overflow-hidden text-ellipsis">
+  Hi, I’m <span className="text-[#58A6FF]">Likitha Vinjam</span>
+</h1>
 
-        {/* Typewriter */}
-        <h2 className="text-xl md:text-2xl font-medium bg-gradient-to-r from-[#58A6FF] via-[#1F6FEB] to-[#58A6FF] bg-clip-text text-transparent">
-          <Typewriter
-            words={['Full Stack Developer', 'Java Developer', 'Software Engineer']}
-            loop
-            cursor
-            typeSpeed={60}
-            deleteSpeed={40}
-            delaySpeed={1500}
-          />
-        </h2>
+
+          <h2 className="text-xl md:text-2xl bg-gradient-to-r from-[#58A6FF] via-[#1F6FEB] to-[#58A6FF] bg-clip-text text-transparent font-medium">
+            <Typewriter
+              words={['Full Stack Developer', 'Java Developer', 'Software Engineer']}
+              loop
+              cursor
+              typeSpeed={60}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
+          </h2>
+
+          <p className="text-md md:text-lg leading-relaxed max-w-xl">
+            I specialize in building cloud-native, scalable applications using{' '}
+            <span className="text-[#58A6FF] font-semibold">Java</span>,{' '}
+            <span className="text-[#58A6FF] font-semibold">React</span>, and{' '}
+            <span className="text-[#58A6FF] font-semibold">JavaScript</span>. Passionate about clean code,
+            intuitive UIs, and solving real-world challenges.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-6 text-2xl mt-4 justify-center md:justify-start">
+            <a
+              href="https://www.linkedin.com/in/likitha-vinjam-739114156"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#58A6FF] transition"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/likitha458458"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#58A6FF] transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="mailto:vlikitha0698@gmail.com"
+              className="hover:text-[#58A6FF] transition"
+            >
+              <FaEnvelope />
+            </a>
+          </div>
+        </div>
 
         {/* Profile Image */}
-        <div className="flex justify-center">
-          <img
-            src={profileImage}
-            alt="Likitha Vinjam"
-            className="w-40 h-40 rounded-full border-4 border-[#1F6FEB] shadow-xl"
-          />
-        </div>
+       {/* Profile Image */}
+{/* Profile Image */}
+<div className="md:w-1/2 flex justify-center mt-12 md:mt-16">
+  <img
+    src={profileImage}
+    alt="Likitha Vinjam"
+    className="w-[28rem] h-[28rem] md:w-[32rem] md:h-[32rem] object-cover opacity-80 mix-blend-screen rounded-none shadow-none"
+    style={{
+      filter: 'brightness(1.1) contrast(1.05)',
+    }}
+  />
+</div>
 
-        {/* About Me Text */}
-        <p className="text-lg max-w-3xl mx-auto leading-relaxed text-[#8B949E]">
-          I build cloud-native, scalable applications with{' '}
-          <span className="text-[#1F6FEB] font-semibold">Java</span>,{' '}
-          <span className="text-[#1F6FEB] font-semibold">React</span>, and{' '}
-          <span className="text-[#1F6FEB] font-semibold">JavaScript</span>. I'm passionate about clean code, intuitive UIs, and solving real-world problems with tech. Outside of work, I mentor, explore new technologies, and enjoy nature.
-        </p>
 
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6 text-2xl text-[#8B949E] mt-4">
-          <a
-            href="https://www.linkedin.com/in/likitha-vinjam-739114156"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#58A6FF]"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/likitha458458"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-[#58A6FF]"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="mailto:vlikitha0698@gmail.com"
-            className="hover:text-[#58A6FF]"
-          >
-            <FaEnvelope />
-          </a>
-        </div>
+
+
+
+
       </div>
     </section>
   );
