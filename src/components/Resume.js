@@ -1,8 +1,8 @@
 import React from 'react';
-import bgExperience from '../assets/bgabout.png'; // Use the same background image as before
+import bgExperience from '../assets/bgabout.png';
 
 const Resume = () => {
-  const pdfUrl = process.env.PUBLIC_URL + '/Likitha_Vinjam_Resume.pdf';
+  const pdfUrl = '/Likitha_Vinjam_Resume.pdf'; // Make sure this file is inside your `public/` folder
 
   return (
     <section
@@ -17,23 +17,21 @@ const Resume = () => {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-75" />
 
-      {/* Content container */}
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 pb-2 text-center">
-          My Resume
-        </h2>
+        <h2 className="text-4xl font-bold mb-10 text-center">My Resume</h2>
 
-        {/* Full-width PDF preview */}
-        <div className="w-full h-[1000px] mb-12 rounded-lg shadow-xl border border-gray-700 overflow-hidden">
-          <embed
+        {/* PDF Preview (for all devices) */}
+        <div className="w-full h-[600px] md:h-[1000px] mb-10 rounded-lg shadow-xl border border-gray-700 overflow-hidden">
+          <iframe
             src={pdfUrl}
-            type="application/pdf"
-            width="100%"
-            height="100%"
+            className="w-full h-full"
+            frameBorder="0"
+            title="Likitha Vinjam Resume"
           />
         </div>
 
-        {/* Download button */}
+        {/* Download Button */}
         <div className="text-center">
           <a
             href={pdfUrl}

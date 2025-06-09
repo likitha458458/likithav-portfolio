@@ -7,7 +7,7 @@ import bgImage from '../assets/bgabout.png';
 const Home = () => {
   return (
     <section
-      className="min-h-screen w-full bg-cover bg-center relative flex items-center justify-center"
+      className="min-h-screen w-full bg-cover bg-center relative flex items-center justify-center pt-28 md:pt-0"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
@@ -17,9 +17,8 @@ const Home = () => {
         {/* Left Side Text */}
         <div className="md:w-1/2 text-[#C9D1D9] space-y-6 text-center md:text-left">
           <h1 className="text-3xl md:text-5xl font-bold text-white whitespace-nowrap overflow-hidden text-ellipsis">
-  Hi, I’m <span className="text-[#58A6FF]">Likitha Vinjam</span>
-</h1>
-
+            Hi, I’m <span className="text-[#58A6FF]">Likitha Vinjam</span>
+          </h1>
 
           <h2 className="text-xl md:text-2xl bg-gradient-to-r from-[#58A6FF] via-[#1F6FEB] to-[#58A6FF] bg-clip-text text-transparent font-medium">
             <Typewriter
@@ -68,24 +67,16 @@ const Home = () => {
         </div>
 
         {/* Profile Image */}
-       {/* Profile Image */}
-{/* Profile Image */}
-<div className="md:w-1/2 flex justify-center mt-12 md:mt-16">
-  <img
-    src={profileImage}
-    alt="Likitha Vinjam"
-    className="w-[28rem] h-[28rem] md:w-[32rem] md:h-[32rem] object-cover opacity-80 mix-blend-screen rounded-none shadow-none"
-    style={{
-      filter: 'brightness(1.1) contrast(1.05)',
-    }}
-  />
-</div>
-
-
-
-
-
-
+        <div className="md:w-1/2 flex justify-center mt-12 md:mt-16">
+          <img
+            src={profileImage}
+            alt="Likitha Vinjam"
+            className="w-[24rem] h-[24rem] md:w-[28rem] md:h-[28rem] object-cover opacity-80 mix-blend-screen rounded-none shadow-none"
+            style={{
+              filter: 'brightness(1.1) contrast(1.05)',
+            }}
+          />
+        </div>
       </div>
     </section>
   );
