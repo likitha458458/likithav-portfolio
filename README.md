@@ -3,8 +3,7 @@
 Welcome to my personal portfolio website! This project showcases my skills, projects, and experience as a Software Developer. It’s built using React and Vite for a fast, modern web development experience.
 
 ## 🔗 Live Demo
-
-Check out the live site: [https://likitha458458.github.io/likithav-portfolio](https://likitha458458.github.io/likithav-portfolio)
+Check out the live site: [https://likithav-portfolio.vercel.app](https://likithav-portfolio.vercel.app)
 
 ## 🚀 Features
 
